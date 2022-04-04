@@ -4,13 +4,19 @@
 # TODO: K8s manifest
 FROM ubuntu:latest
 
+
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Stockholm
+
 
 RUN apt-get update && \
     apt-get -y install \ 
     software-properties-common \
-    git && \
+    git \
+    jq \
+    wireguard-tools \
+    iproute2 \
+    curl && \
     add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable && \
     apt-get -y update && \
     apt-get -y install qbittorrent-nox
@@ -21,4 +27,5 @@ COPY wrapper.sh .
 RUN chmod +x wrapper.sh
 COPY qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
 RUN mkdir /torrent
-ENTRYPOINT ./wrapper.sh
+
+#ENTRYPOINT ./wrapper.sh
