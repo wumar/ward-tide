@@ -4,22 +4,22 @@
 # TODO: K8s manifest
 FROM ubuntu:latest
 
-
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Stockholm
 
-
-RUN apt-get update && \
-    apt-get -y install \ 
+RUN apt-get update \
+    && apt-get -y install \ 
     software-properties-common \
     git \
     jq \
     wireguard-tools \
     iproute2 \
-    curl && \
-    add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable && \
-    apt-get -y update && \
-    apt-get -y install qbittorrent-nox
+    tinyproxy \
+    curl \
+    && add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable \
+    && apt-get -y update \
+    && apt-get -y install qbittorrent-nox \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/pia-foss/manual-connections.git
 WORKDIR /manual-connections
