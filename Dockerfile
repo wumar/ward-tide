@@ -1,5 +1,4 @@
 # Wireguard PIA and qbittorrent
-# TODO: Handle adding the port to qbittorrent
 # TODO: Tiny Proxy
 # TODO: K8s manifest
 FROM ubuntu:latest
@@ -28,4 +27,4 @@ RUN chmod +x wrapper.sh
 COPY qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
 RUN mkdir /torrent
 
-#ENTRYPOINT ./wrapper.sh
+ENTRYPOINT ./wrapper.sh
