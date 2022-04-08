@@ -1,4 +1,4 @@
-# Wireguard PIA and qbittorrent
+# Wireguard PIA and qbittorrent 
 # TODO: Tiny Proxy
 # TODO: K8s manifest
 FROM ubuntu:latest
