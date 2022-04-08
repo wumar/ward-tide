@@ -1,7 +1,7 @@
 #!/bin/bash
 set -m
-./run_setup.sh > log.txt &
+./run_setup.sh > pia_log.txt &
 sleep 30
-export PORT=$(tail log.txt | grep Forwarded | grep -o '.....$')
+echo "Connection\PortRangeMin=$(tail pia_log.txt | grep Forwarded | grep -o '.....$')" >> /root/.config/qBittorrent/qBittorrent.conf
 tinyproxy &
 qbittorrent-nox
