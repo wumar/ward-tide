@@ -1,4 +1,4 @@
-# Wireguard PIA and qbittorrent
+# Wireguard PIA and qbittorrent 
 # TODO: Tiny Proxy
 # TODO: K8s manifest
 FROM ubuntu:latest
@@ -12,6 +12,7 @@ RUN apt-get update \
     git \
     jq \
     wireguard-tools \
+    openvpn \
     iproute2 \
     tinyproxy \
     curl \

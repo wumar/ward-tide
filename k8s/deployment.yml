@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wardtide
+spec:
+  selector:
+    matchLabels:
+      app: wardtide
+  template:
+    metadata:
+      labels:
+        app: wardtide
+    spec:
+      containers:
+      - name: myapp
+        imagePullPolicy: Always
+        image: ghcr.io/wumar/ward-tide:latest
+        envFrom:
+          - configMapRef:
+              name: pia-config
+              optional: false
+          - secretRef:
+              name: pia-pass
+              optional: false
+        securityContext:
+          capabilities:
+            add:
+            - NET_ADMIN
+          privileged: true
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - mountPath: /torrent
+          name: data
+      volumes:
+      - name: data
+        hostPath:
+          path: /media/sjaoraid/wardtide
