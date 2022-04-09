@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'Dockerfile'
+      - 'wrapper.sh'
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -4,4 +4,4 @@ set -m
 sleep 30
 echo "Connection\PortRangeMin=$(tail pia_log.txt | grep Forwarded | grep -o '.....$')" >> /root/.config/qBittorrent/qBittorrent.conf
 # tinyproxy &
-qbittorrent-nox &
+qbittorrent-nox
