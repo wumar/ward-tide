@@ -37,7 +37,20 @@ spec:
         volumeMounts:
         - mountPath: /torrent
           name: data
+        - mountPath: /dev/net/tun
+          name: tunnel
+        - mountPath: /etc/localtime
+          name: localtime
+          readOnly: true
       volumes:
       - name: data
         hostPath:
           path: /media/sjaoraid/wardtide
+      - hostPath:
+          path: /dev/net/tun
+          type: ""
+        name: tunnel
+      - hostPath:
+          path: /etc/localtime
+          type: ""
+        name: localtime

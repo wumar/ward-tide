@@ -9,11 +9,12 @@ resources:
 configMapGenerator:
   - name: pia-config
     literals:
-      - PIA_DNS=false
+      - PIA_DNS=true
       - PIA_PF=true
       - AUTOCONNECT=true
-      - VPN_PROTOCOL=openvpn_tcp_strong
+      - VPN_PROTOCOL=wireguard
       - DISABLE_IPV6=true
+      - LAN_NETWORK="10.0.0.0/8"
 secretGenerator:
 - name: pia-pass
   envs:

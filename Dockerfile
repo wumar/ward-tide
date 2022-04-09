@@ -14,7 +14,7 @@ RUN apt-get update \
     wireguard-tools \
     openvpn \
     iproute2 \
-    tinyproxy \
+    # tinyproxy \
     curl \
     && add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable \
     && apt-get -y update \
