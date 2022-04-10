@@ -13,7 +13,7 @@ spec:
         app: wardtide
     spec:
       containers:
-      - name: myapp
+      - name: wardtide
         imagePullPolicy: Always
         image: ghcr.io/wumar/ward-tide:latest
         envFrom:
@@ -35,27 +35,13 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
-        - containerPort: 8999
-          protocol: TCP
-        - containerPort: 8999
+        - containerPort: 5180
           protocol: UDP
         volumeMounts:
         - mountPath: /torrent
           name: data
-        - mountPath: /dev/net/tun
-          name: tunnel
-        - mountPath: /etc/localtime
-          name: localtime
-          readOnly: true
       volumes:
       - name: data
         hostPath:
           path: /media/sjaoraid/wardtide
-      - hostPath:
-          path: /dev/net/tun
-          type: ""
-        name: tunnel
-      - hostPath:
-          path: /etc/localtime
-          type: ""
-        name: localtime
+
