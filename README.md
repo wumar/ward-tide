@@ -8,7 +8,7 @@ If you want to run this using docker its best to mount an env file containing al
 variables for PIA connection they are as follows
 
 | Variable     |   Description  |
-|-----------------------------------------------|
+| ------------ | -------------- |
 | PIA_USER     | Username |
 | PIA_PASS     | Password |
 | PIA_DNS      | Boolean: use PIA DNS |
