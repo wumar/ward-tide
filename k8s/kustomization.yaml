@@ -6,7 +6,6 @@ commonLabels:
 resources:
 - deployment.yml
 - service.yml
-- wireguard-svc.yaml
 - pia_sealed.yaml
 configMapGenerator:
   - name: pia-config
