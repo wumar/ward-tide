@@ -16,7 +16,3 @@ configMapGenerator:
       - VPN_PROTOCOL=wireguard
       - DISABLE_IPV6=true
       - LAN_NETWORK="10.0.0.0/8"
-secretGenerator:
-- name: pia-pass
-  envs:
-  - vars.env
