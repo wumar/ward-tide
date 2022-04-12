@@ -1,0 +1,20 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: pia-pass
+  namespace: wardtide
+spec:
+  encryptedData:
+    PIA_PASS: AgCjpQMq1huY4WK1Vt1s2pNZEXqvJRkCgpsXmAdVHfXb4OkrjFCWFVmcAJU9q5O3rju3XIlinTmoyhFp3w67udyIr9nc2r4eN8+ywL+z16uI2JxTuSJ7ors8w5DeX9dh+fbvqZlHRlt5xtGAMhZNVpRhEuS5b9cimhs/PqeZf7775qK+iH5iGp1yxyGK1ZMPj1EJPIfXdwcVC3XN2zwA+Gp4ckx8AkSjkJe9mYR1VcvZKUVPvbVAc7pzPoSb8JpvYo+oNXcp6tGBKd5ciElwVD9ZqGY5kdSSAoV12QMWd2Fm6oLuoANA/rJ7hzCbF4vQbl9zRAUsBxSOQ1pC1lvZt8egZJA2I4byhIPCE7z9QyxySWE8/3IY69pnyuoe3SqpDStsmbTLr9Hd0M8mIoxNNcAdQoYLi85kaY2dmIHvdxG7pf/iSzEvrGvcrz0jgPTi+hz9cArhl4ma7/j0wpX/jGtFp8V07H5SMA/YWcurR1v7z18WXt1cqLXE3NSlbuz7bKCQjIGB9bQxkbV4vkxHOifu22E9dxBDuyET3DT8wSesLHLxAWOimL7Lg+EuHHTdNJCSPg8/Vo77AcuJjWKhpSjRqWKE0dFqWDv/k16JJCIpF+P0CAMFwgO3GE6Fpu/ZwpjddJ+6su1b98DigqcM949hMDJxqEQsbFgYyH7LUuZrPrTGIPSiw9bRj5USZSpav6ExkMzRFvK3Ns8Jqnw=
+    PIA_USER: AgAClpeZXD6KFeVIKSgiJJGYGd6fgjrkdafv8wMqbax5aUo6i+VamRTsVY3ErLvfcE6FVtK13B4jHJyCd4I5vHE2UnwGPbEZDneAGd32Wjzygsttz6TEC2ShFqbuL3Fo87gq6FPcHkEwUaDUpK+crW72RSGiZsfyEHlgZlZgdTVSXfprrytgyjLkdxcdgUukGNNXDVzm/JL0IcV+1rygIFGwHBPlD/AibMrpSu8OX7Kcx/gIk+9CRQ752uf8NDQpH9vvCw4gkpAX/vp/f3iiTz0E5GeJv6lKGcIg+bheRx51HSblrz5knRqaZgwYpEz7BmGfY9CHIWwnoQw0UigBN8Jo1ShT8wzoZWbjluPhKn6gvVtGJdxSgWCUUfP+6RDnofIB1y2VVeGPXrG25zwBbe9ojw4MtFJPtlx/wFHKeUBo2Q8idvupb0rHONCijXJUVYxKsgxD0efLxABtM8yFRmaZIXAk85Qnqc8dki8O0esgT3HkJI6z3IeyIQQaARRRMBgITCSLJTfg2ThI8zSQOr3gtZsAwB0LlnrHqOUE7OHKq4pFz6dj9sRSZCRTfnzLtpQhe++GthbxlE+tS3KMU29l+pH3bdjKbLWsmr130FBnoNmBB1v5pOzMaf/+osPnUi1oHCUZxsURjzgUcDfS/3QhIV/p6/25atUWtmcXDXZqM+Zfb+s4v/B3q+s1oO7PlUlJTIw5ItEFmw==
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: wardtide
+      name: pia-pass
+      namespace: wardtide
+    type: Opaque
+
