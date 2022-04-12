@@ -38,14 +38,13 @@ spec:
         volumeMounts:
         - mountPath: /torrent
           name: data
-        - mountPath: /dev/net/tun
+        - mountPath: /dev/fd
           name: tunnel
       volumes:
       - name: data
         hostPath:
           path: /media/sjaoraid/wardtide
       - hostPath:
-          path: /dev/net/tun
-          type: ""
+          path: /dev/fd
         name: tunnel
 
