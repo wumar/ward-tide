@@ -15,7 +15,6 @@ RUN apt-get update \
     jq \
     wireguard-tools \
     resolvconf \
-    openvpn \
     iproute2 \
     tinyproxy \
     curl \
@@ -29,6 +28,6 @@ WORKDIR /manual-connections
 COPY wrapper.sh .
 RUN chmod +x wrapper.sh
 COPY qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
-RUN mkdir /torrent
+COPY tinyproxy.conf /etct/tinyproxy/tinyproxy.conf
 
 ENTRYPOINT ./wrapper.sh
