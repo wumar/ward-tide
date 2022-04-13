@@ -4,6 +4,8 @@ on:
     paths:
       - 'Dockerfile'
       - 'wrapper.sh'
+      - '*.conf'
+
 jobs:
   build:
     runs-on: ubuntu-latest
