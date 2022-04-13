@@ -28,6 +28,6 @@ WORKDIR /manual-connections
 COPY wrapper.sh .
 RUN chmod +x wrapper.sh
 COPY qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
-COPY tinyproxy.conf /etct/tinyproxy/tinyproxy.conf
+COPY tinyproxy.conf ./tinyproxy.conf
 
 ENTRYPOINT ./wrapper.sh
