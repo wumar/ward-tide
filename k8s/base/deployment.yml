@@ -33,13 +33,26 @@ spec:
             memory: "512Mi"
             cpu: "500m"
         ports:
-        - containerPort: 8080
+        - name: webui
+          containerPort: 8080
           protocol: TCP
         volumeMounts:
-        - mountPath: /torrent
+        - mountPath: /sjaoraid
           name: data
+        livenessProbe:
+          httpGet:
+            path: /
+            port: webui
+          failureThreshold: 5
+          periodSeconds: 60
+        startupProbe:
+          httpGet:
+            path: /
+            port: webui
+          failureThreshold: 12
+          periodSeconds: 10
       volumes:
       - name: data
         hostPath:
-          path: /media/sjaoraid/wardtide
+          path: /media/sjaoraid/
 
