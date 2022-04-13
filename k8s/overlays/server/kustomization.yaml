@@ -4,6 +4,6 @@ namespace: wardtide
 commonLabels:
   app: wardtide
 bases:
-  - ../
+  - ../../base
 patchesStrategicMerge:
   - pia_sealed.yaml
