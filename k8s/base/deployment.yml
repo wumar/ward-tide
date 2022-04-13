@@ -36,6 +36,9 @@ spec:
         - name: webui
           containerPort: 8080
           protocol: TCP
+        - name: proxy
+          containerPort: 8888
+          protocol: TCP
         volumeMounts:
         - mountPath: /sjaoraid
           name: data
