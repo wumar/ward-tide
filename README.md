@@ -1,11 +1,13 @@
 # ward-tide
 PIA wiregaurd, qbittorrent and k8s
 
-A Dockerfile and Kustomise app that bring together PIAs scripts for connecting via 
-wireguard to their VPN, tinyproxy and qbittorrent. Pretty simple stuff.
+A Dockerfile and Kustomise app that bring together PIAs scripts 
+(https://github.com/pia-foss/manual-connections.git)
+for connecting via wireguard to their VPN, tinyproxy and qbittorrent. Pretty simple stuff.
 
 If you want to run this using docker its best to mount an env file containing all required
-variables for PIA connection they are as follows
+variables for PIA connection they are as follows. Could never get resolvconf to work properly in all setups
+so I just ended up manually adding PIA DNS to resolv.conf. All advice welcome.
 
 | Variable     |   Description  |
 | ------------ | -------------- |
@@ -18,10 +20,6 @@ variables for PIA connection they are as follows
 | DISABLE_IPV6 | Boolean |
 
 If you want to use this with kubernetes, edit the kustomization file as needed both for the config
-map which contains non-sensitive values and include a file called vars.env that contains the user and password
-information in the same direction when applying.
+map which contains non-sensitive values and include a sealed secret for you pia user name and password.
+Therefore it is dependant on sealed secrets from bitnami. https://github.com/bitnami-labs/sealed-secrets.
 
-## Known Issues: 
-Some setups involving Microk8s and wiregaurd will have a broken ip tables 
-setup that shuts off internet as soon as connected to wireguard. This is more about your
-micork8s and wireguard conflict that it is about this repo.
