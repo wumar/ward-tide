@@ -10,7 +10,7 @@ resources:
 configMapGenerator:
   - name: pia-config
     literals:
-      - PIA_DNS=true
+      - PIA_DNS=no
       - PIA_PF=true
       - AUTOCONNECT=true
       - VPN_PROTOCOL=wireguard
