@@ -16,5 +16,6 @@ configMapGenerator:
       - PIA_PF=true
       - AUTOCONNECT=true
       - VPN_PROTOCOL=wireguard
-      - DISABLE_IPV6=true
+      - DISABLE_IPV6=yes
       - LAN_NETWORK="10.0.0.0/8"
+      - DIP_TOKEN=none
