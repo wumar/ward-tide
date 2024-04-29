@@ -1,7 +1,7 @@
 # Wireguard PIA and qbittorrent 
 # TODO: Tiny Proxy
 # TODO: K8s manifest
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Stockholm
