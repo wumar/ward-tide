@@ -29,5 +29,7 @@ COPY wrapper.sh .
 RUN chmod +x wrapper.sh
 COPY qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
 COPY tinyproxy.conf ./tinyproxy.conf
+RUN mkdir /var/log/tinyproxy \
+    && chown -R tinyproxy:tinyproxy /var/log/tinyproxy
 
 ENTRYPOINT ./wrapper.sh
