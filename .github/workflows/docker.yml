@@ -5,6 +5,7 @@ on:
       - 'Dockerfile'
       - 'wrapper.sh'
       - '*.conf'
+  workflow_dispatch:
 
 jobs:
   build:
